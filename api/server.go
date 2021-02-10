@@ -4,6 +4,7 @@ import (
 	"api/graph"
 	"api/graph/generated"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 
 	"github.com/99designs/gqlgen/graphql/handler"
@@ -28,6 +29,7 @@ func playgroundHandler() gin.HandlerFunc {
 
 func main() {
 	r := gin.Default()
+	r.Use(cors.Default())
 	r.POST("/query", graphqlHandler())
 	r.GET("/", playgroundHandler())
 	r.Run()

@@ -1,4 +1,6 @@
 dependencies:
+  '@apollo/client': 3.3.9_graphql@15.5.0+react@17.0.1
+  graphql: 15.5.0
   react: 17.0.1
   react-dom: 17.0.1_react@17.0.1
 devDependencies:
@@ -12,6 +14,35 @@ devDependencies:
   vite: 2.0.0-beta.65
 lockfileVersion: 5.2
 packages:
+  /@apollo/client/3.3.9_graphql@15.5.0+react@17.0.1:
+    dependencies:
+      '@graphql-typed-document-node/core': 3.1.0_graphql@15.5.0
+      '@types/zen-observable': 0.8.2
+      '@wry/context': 0.5.4
+      '@wry/equality': 0.3.2
+      fast-json-stable-stringify: 2.1.0
+      graphql: 15.5.0
+      graphql-tag: 2.12.0_graphql@15.5.0
+      hoist-non-react-statics: 3.3.2
+      optimism: 0.14.0
+      prop-types: 15.7.2
+      react: 17.0.1
+      symbol-observable: 2.0.3
+      ts-invariant: 0.6.0
+      tslib: 1.14.1
+      zen-observable: 0.8.15
+    dev: false
+    peerDependencies:
+      graphql: ^14.0.0 || ^15.0.0
+      react: ^16.8.0 || ^17.0.0
+      subscriptions-transport-ws: ^0.9.0
+    peerDependenciesMeta:
+      react:
+        optional: true
+      subscriptions-transport-ws:
+        optional: true
+    resolution:
+      integrity: sha512-4koVaCKcztuNZCiKP/nyghCVon1Y0+EoIpBytTDTvn7L+QkEQpgKZiWcRGnuJjdvL8QlKiiV7zhdJOiDhIoiUw==
   /@babel/code-frame/7.12.13:
     dependencies:
       '@babel/highlight': 7.12.13
@@ -191,6 +222,14 @@ packages:
     dev: true
     resolution:
       integrity: sha512-kwOXw8fZ0Lt1QmeOOrd+o4Ibvp4UTEBFQbzvWldjlKv5n+G9sXfIPn1hh63IQIL8K8vbvv1oYMJiIUbuy9bGaA==
+  /@graphql-typed-document-node/core/3.1.0_graphql@15.5.0:
+    dependencies:
+      graphql: 15.5.0
+    dev: false
+    peerDependencies:
+      graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0
+    resolution:
+      integrity: sha512-wYn6r8zVZyQJ6rQaALBEln5B1pzxb9shV5Ef97kTvn6yVGrqyXVnDqnU24MXnFubR+rZjBY9NWuxX3FB2sTsjg==
   /@types/prop-types/15.7.3:
     dev: true
     resolution:
@@ -208,6 +247,18 @@ packages:
     dev: true
     resolution:
       integrity: sha512-w8t9f53B2ei4jeOqf/gxtc2Sswnc3LBK5s0DyJcg5xd10tMHXts2N31cKjWfH9IC/JvEPa/YF1U4YeP1t4R6HQ==
+  /@types/ungap__global-this/0.3.1:
+    dev: false
+    resolution:
+      integrity: sha512-+/DsiV4CxXl6ZWefwHZDXSe1Slitz21tom38qPCaG0DYCS1NnDPIQDTKcmQ/tvK/edJUKkmuIDBJbmKDiB0r/g==
+  /@types/zen-observable/0.8.2:
+    dev: false
+    resolution:
+      integrity: sha512-HrCIVMLjE1MOozVoD86622S7aunluLb2PJdPfb3nYiEtohm8mIB/vyv0Fd37AdeMFrTUQXEunw78YloMA3Qilg==
+  /@ungap/global-this/0.4.4:
+    dev: false
+    resolution:
+      integrity: sha512-mHkm6FvepJECMNthFuIgpAEFmPOk71UyXuIxYfjytvFTnSDBIz7jmViO+LfHI/AjrazWije0PnSP3+/NlwzqtA==
   /@vitejs/plugin-react-refresh/1.2.2:
     dependencies:
       '@babel/core': 7.12.13
@@ -218,6 +269,30 @@ packages:
       node: '>=12.0.0'
     resolution:
       integrity: sha512-MEVSqncF/u1nvfeZsBJtPc3pLZWccN77CjY0itW7/Vji5BMmttW25a1kjSmooE+4JK4kaF3ElwF3LbV2kiVZWw==
+  /@wry/context/0.5.4:
+    dependencies:
+      tslib: 1.14.1
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-/pktJKHUXDr4D6TJqWgudOPJW2Z+Nb+bqk40jufA3uTkLbnCRKdJPiYDIa/c7mfcPH8Hr6O8zjCERpg5Sq04Zg==
+  /@wry/equality/0.3.2:
+    dependencies:
+      tslib: 1.14.1
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-yi0VRqw+ygqM/WVZUze5meAhe2evOHBFXqK8onNVdNNB+Tyn8/07FZpeDklECBHeT9KN9DY2JpCVGNQY6RCRDg==
+  /@wry/trie/0.2.2:
+    dependencies:
+      tslib: 1.14.1
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-OxqBB39x6MfHaa2HpMiRMfhuUnQTddD32Ko020eBeJXq87ivX6xnSSnzKHVbA21p7iqBASz8n/07b6W5wW1BVQ==
   /acorn-node/1.8.2:
     dependencies:
       acorn: 7.4.1
@@ -462,6 +537,10 @@ packages:
       node: '>=0.8.0'
     resolution:
       integrity: sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
+  /fast-json-stable-stringify/2.1.0:
+    dev: false
+    resolution:
+      integrity: sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==
   /fraction.js/4.0.13:
     dev: true
     resolution:
@@ -531,6 +610,21 @@ packages:
     dev: true
     resolution:
       integrity: sha512-kBBSQbz2K0Nyn+31j/w36fUfxkBW9/gfwRWdUY1ULReH3iokVJgddZAFcD1D0xlgTmFxJCbUkUclAlc6/IDJkw==
+  /graphql-tag/2.12.0_graphql@15.5.0:
+    dependencies:
+      graphql: 15.5.0
+      tslib: 1.14.1
+    dev: false
+    peerDependencies:
+      graphql: ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0
+    resolution:
+      integrity: sha512-iK040pFYpQpHfqF5UJOlYu2XEw6wx56aiyKJP1zqhxabGssqfbTIqz6U++cBwx/Izad0JNq6IsWvrL+p6d1GOA==
+  /graphql/15.5.0:
+    dev: false
+    engines:
+      node: '>= 10.x'
+    resolution:
+      integrity: sha512-OmaM7y0kaK31NKG31q4YbD2beNYa6jBBKtMFT6gLYJljHLJr42IqJ8KX08u3Li/0ifzTU5HjmoOOrwa5BRLeDA==
   /has-flag/3.0.0:
     dev: true
     engines:
@@ -551,6 +645,12 @@ packages:
       node: '>= 0.4.0'
     resolution:
       integrity: sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==
+  /hoist-non-react-statics/3.3.2:
+    dependencies:
+      react-is: 16.13.1
+    dev: false
+    resolution:
+      integrity: sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==
   /html-tags/3.1.0:
     dev: true
     engines:
@@ -684,6 +784,13 @@ packages:
     dev: true
     resolution:
       integrity: sha1-WDsap3WWHUsROsF9nFC6753Xa9E=
+  /optimism/0.14.0:
+    dependencies:
+      '@wry/context': 0.5.4
+      '@wry/trie': 0.2.2
+    dev: false
+    resolution:
+      integrity: sha512-ygbNt8n4DOCVpkwiLF+IrKKeNHOjtr9aXLWGP9HNJGoblSGsnVbJLstcH6/nE9Xy5ZQtlkSioFQNnthmENW6FQ==
   /path-is-absolute/1.0.1:
     dev: true
     engines:
@@ -768,6 +875,14 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha1-t+PqQkNaTJsnWdmeDyAesZWALuE=
+  /prop-types/15.7.2:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      react-is: 16.13.1
+    dev: false
+    resolution:
+      integrity: sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
   /purgecss/3.1.3:
     dependencies:
       commander: 6.2.1
@@ -789,6 +904,10 @@ packages:
       react: 17.0.1
     resolution:
       integrity: sha512-6eV150oJZ9U2t9svnsspTMrWNyHc6chX0KzDeAOXftRa8bNeOKTTfCJ7KorIwenkHd2xqVTBTCZd79yk/lx/Ug==
+  /react-is/16.13.1:
+    dev: false
+    resolution:
+      integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
   /react-refresh/0.9.0:
     dev: true
     engines:
@@ -877,6 +996,12 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==
+  /symbol-observable/2.0.3:
+    dev: false
+    engines:
+      node: '>=0.10'
+    resolution:
+      integrity: sha512-sQV7phh2WCYAn81oAkakC5qjq2Ml0g8ozqz03wOGnx9dDlG1de6yrF+0RAzSJD8fPUow3PTSMf2SAbOGxb93BA==
   /tailwindcss/2.0.3_132a6068366276bc6a71795f98f5a160:
     dependencies:
       '@fullhuman/postcss-purgecss': 3.1.3
@@ -916,6 +1041,20 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=
+  /ts-invariant/0.6.0:
+    dependencies:
+      '@types/ungap__global-this': 0.3.1
+      '@ungap/global-this': 0.4.4
+      tslib: 1.14.1
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-caoafsfgb8QxdrKzFfjKt627m4i8KTtfAiji0DYJfWI4A/S9ORNNpzYuD9br64kyKFgxn9UNaLLbSupam84mCA==
+  /tslib/1.14.1:
+    dev: false
+    resolution:
+      integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
   /typescript/4.1.3:
     dev: true
     engines:
@@ -961,11 +1100,17 @@ packages:
       node: '>=0.4'
     resolution:
       integrity: sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
+  /zen-observable/0.8.15:
+    dev: false
+    resolution:
+      integrity: sha512-PQ2PC7R9rslx84ndNBZB/Dkv8V8fZEpk83RLgXtYd0fwUgEjseMn1Dgajh2x6S8QbZAFa9p2qVCEuYZNgve0dQ==
 specifiers:
+  '@apollo/client': ^3.3.9
   '@types/react': ^17.0.0
   '@types/react-dom': ^17.0.0
   '@vitejs/plugin-react-refresh': ^1.1.0
   autoprefixer: ^10.2.4
+  graphql: ^15.5.0
   postcss: ^8.2.5
   react: ^17.0.0
   react-dom: ^17.0.0
