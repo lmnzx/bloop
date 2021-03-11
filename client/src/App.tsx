@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav";
 import About from "./pages/About";
