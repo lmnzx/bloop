@@ -1,10 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
-import { Helmet, HelmetProvider } from "react-helmet-async";
-import { BrowserRouter } from "react-router-dom";
-import "./index.css";
+import { HelmetProvider } from "react-helmet-async";
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import App from "./App";
+import "./index.css";
 
 const client = new ApolloClient({
   uri: "http://localhost:8080/graphql",
@@ -14,11 +13,9 @@ const client = new ApolloClient({
 ReactDOM.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
-      <BrowserRouter>
-        <HelmetProvider>
-          <App />
-        </HelmetProvider>
-      </BrowserRouter>
+      <HelmetProvider>
+        <App />
+      </HelmetProvider>
     </ApolloProvider>
   </React.StrictMode>,
   document.getElementById("root")
