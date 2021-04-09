@@ -4,6 +4,7 @@ import (
 	"bloop/graph"
 	"bloop/graph/generated"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 
 	"github.com/99designs/gqlgen/graphql/handler"
@@ -24,7 +25,7 @@ func graphqlHandler() gin.HandlerFunc {
 
 // Defining the Playground handler
 func playgroundHandler() gin.HandlerFunc {
-	h := playground.Handler("GraphQL", "/query")
+	h := playground.Handler("GraphQL", "/graphql")
 
 	return func(c *gin.Context) {
 		h.ServeHTTP(c.Writer, c.Request)
@@ -34,7 +35,8 @@ func playgroundHandler() gin.HandlerFunc {
 func main() {
 	// Setting up Gin
 	r := gin.Default()
-	r.POST("/query", graphqlHandler())
+	r.Use(cors.Default())
+	r.POST("/graphql", graphqlHandler())
 	r.GET("/", playgroundHandler())
 	r.Run()
 }
