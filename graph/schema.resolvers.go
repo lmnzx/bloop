@@ -5,13 +5,14 @@ package graph
 
 import (
 	"bloop/graph/generated"
+	"bloop/graph/model"
 	"context"
 	"time"
 )
 
-func (r *queryResolver) Hello(ctx context.Context) (string, error) {
-	data := time.Now()
-	return data.String(), nil
+func (r *queryResolver) Hello(ctx context.Context) (*model.Greet, error) {
+	result := model.Greet{Text: "Hello There", Time: time.Now().String()}
+	return &result, nil
 }
 
 // Query returns generated.QueryResolver implementation.

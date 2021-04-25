@@ -1,17 +1,13 @@
 import React, { Fragment } from "react";
 import { Helmet } from "react-helmet-async";
-import { useQuery, gql } from "@apollo/client";
+// import { useQuery, gql } from "@apollo/client";
 
-const QUERY = gql`
-  query {
-    hello
-  }
-`;
+import { useHelloQuery } from "./generated-types";
 
 export default function App() {
-  const { loading, error, data } = useQuery(QUERY);
+  const { loading, error, data } = useHelloQuery();
 
-  const output = loading ? "Loading..." : error ? "ERROR" : data.hello;
+  console.log(data);
 
   return (
     <Fragment>
@@ -21,7 +17,9 @@ export default function App() {
         <link rel="icon" type="image/svg+xml" href="static/pawprint.svg" />
       </Helmet>
       <div>
-        <p>{output}</p>
+        <p>{data?.hello.text}</p>
+        <p>{data?.hello.time}</p>
+        <h1>meow</h1>
       </div>
     </Fragment>
   );
