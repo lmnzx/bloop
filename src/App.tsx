@@ -1,7 +1,5 @@
 import React, { Fragment } from "react";
 import { Helmet } from "react-helmet-async";
-// import { useQuery, gql } from "@apollo/client";
-
 import { useHelloQuery } from "./generated-types";
 
 export default function App() {
