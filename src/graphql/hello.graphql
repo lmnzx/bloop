@@ -1,6 +1,0 @@
-query Hello {
-  hello {
-    text
-    time
-  }
-}
